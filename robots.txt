@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://pawelzygmuntkrol.github.io/michalkrol2.0/src/index.html/sitemap.xml
+Host: https://pawelzygmuntkrol.github.io
