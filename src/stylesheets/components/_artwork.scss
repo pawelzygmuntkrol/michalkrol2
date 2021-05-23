@@ -1,0 +1,101 @@
+.artwork-container {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+
+  &__images-container {
+    width: 100vw;
+    background-color: $black;
+  }
+
+  &__image-item-container {
+    @include flex-align-center;
+
+    width: 100vw;
+    height: 100vh;
+    padding: 0 5vh;
+    scroll-snap-align: center;
+  }
+
+  &__image {
+    width: auto;
+    max-height: 80vh;
+  }
+
+  &__description-container {
+    @include flex-align-center($dir:column);
+
+    width: 100vw;
+    height: 100vh;
+    padding: 0 10vw;
+    background-color: $black;
+    scroll-snap-align: center;
+    transition-property: background-color;
+    transition-duration: 550ms;
+  }
+
+  &__description-title {
+    font-size: $header-font;
+    text-align: center;
+  }
+
+  &__description-date {
+    font-size: $title-font;
+  }
+
+  &__description-status {
+    font-size: $big-font;
+  }
+
+  &__description-text {
+    font-size: $medium-font;
+    text-align: justify;
+  }
+
+  &__description-title,
+  &__description-date,
+  &__description-status,
+  &__description-text {
+    padding: 0.3rem 0;
+  }
+
+  &__painting-information {
+    left: 0;
+  }
+
+  &__painting-dimensions {
+    right: 0;
+  }
+
+  &__painting-information,
+  &__painting-dimensions {
+    position: fixed;
+    bottom: 0;
+    padding: 1rem 2rem;
+    color: $gray;
+  }
+
+  @media (max-width: 480px), (max-width: 850px) and (orientation: landscape) {
+    &__image {
+      height: auto;
+    }
+
+    &__description-title {
+      font-size: $title-font;
+    }
+
+    &__description-date {
+      font-size: $big-font;
+    }
+
+    &__description-status {
+      font-size: $medium-font;
+    }
+
+    &__description-text {
+      font-size: $small-font;
+    }
+  }
+}

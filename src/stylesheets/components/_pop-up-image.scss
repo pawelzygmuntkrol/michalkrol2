@@ -1,0 +1,36 @@
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 4;
+  transition-property: opacity;
+  transition-duration: 550ms;
+
+  &--hidden {
+    opacity: 0;
+  }
+
+  &--deleted {
+    display: none;
+  }
+
+  &__container {
+    @include flex-align-center;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(3px);
+  }
+
+  &__image {
+    height: 80%;
+  }
+
+  @media (max-width: 480px) {
+    &__image {
+      width: 80%;
+    }
+  }
+}

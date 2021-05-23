@@ -1,0 +1,39 @@
+// FONTS.
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Oswald:wght@300&display=swap');
+// Type.
+$main-font: 'Oswald', sans-serif; // defined in reset css as a default font.
+$suplementary-font: 'Open Sans Condensed', sans-serif;
+//Size.
+$header-font: 5rem;
+$title-font: 1.8rem;
+$big-font: 1.2rem;
+$medium-font: 1rem;
+$small-font: 0.8rem;
+$small-mobile-font: 0.6rem;
+
+// Mixins.
+@mixin flex-align-center ($jst-cnt:center, $aln-itm:center, $wrap:nowrap, $dir:row) {
+  display: flex;
+  justify-content: $jst-cnt;
+  align-items: $aln-itm;
+  flex-wrap: $wrap;
+  flex-direction: $dir;
+}
+
+// Colors.
+$white: rgba(255, 255, 255, 1);
+$gray: rgba(125, 125, 125, 1);
+$dim-gray: rgba(50, 50, 50, 1);
+$black: rgba(0, 0, 0, 1);
+
+//Key frames (used in Exhibitions, Biography and Contact).
+@keyframes showHeader {
+  0% {
+    color: $white;
+  }
+
+  100% {
+    color: $black;
+  }
+}

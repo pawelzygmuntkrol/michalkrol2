@@ -1,0 +1,36 @@
+.biography {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+
+  &__header {
+    @include flex-align-center;
+
+    width: 100vw;
+    height: 100vh;
+    font-size: $header-font;
+    font-weight: 900;
+    scroll-snap-align: center;
+    animation: 1000ms ease-out showHeader;
+  }
+
+  &__paragraph {
+    @include flex-align-center;
+
+    width: 100vw;
+    height: 100vh;
+    padding: 0 25vw;
+    font-size: $medium-font;
+    text-align: justify;
+    scroll-snap-align: center;
+  }
+
+  @media (max-width: 480px), (max-width: 850px) and (orientation: landscape) {
+    &__paragraph {
+      font-size: $small-font;
+      padding: 0 2rem;
+    }
+  }
+}

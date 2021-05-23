@@ -1,0 +1,95 @@
+.exhibitions {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+
+  &__header {
+    @include flex-align-center;
+
+    width: 100vw;
+    height: 100vh;
+    font-size: $header-font;
+    font-weight: 900;
+    scroll-snap-align: center;
+    animation: 1000ms ease-out showHeader;
+  }
+
+  &__text {
+    width: 80%;
+    padding-right: 2rem;
+    text-align: justify;
+  }
+
+  &__item {
+    @include flex-align-center($jst-cnt:space-between);
+
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem;
+    scroll-snap-align: center;
+  }
+
+  &__title {
+    font-size: $title-font;
+    font-weight: 900;
+  }
+
+  &__date {
+    font-size: $big-font;
+    font-weight: 900;
+  }
+
+  &__description {
+    font-size: $medium-font;
+  }
+
+  &__link {
+    display: block;
+    font-size: $small-font;
+    text-decoration: none;
+    color: $black;
+  }
+
+  &__link:hover {
+    font-weight: 900;
+  }
+
+  &__title,
+  &__date,
+  &__description {
+    margin-bottom: 0.6rem;
+  }
+
+  &__image {
+    width: 20%;
+  }
+
+  @media (max-width: 480px), (max-width: 850px) and (orientation: landscape) {
+    &__text {
+      width: 100%;
+      padding-right: 0;
+    }
+
+    &__image {
+      display: none;
+    }
+
+    &__title {
+      font-size: $big-font;
+    }
+
+    &__date {
+      font-size: $medium-font;
+    }
+
+    &__description {
+      font-size: $small-font;
+    }
+
+    &__link {
+      font-size: $small-mobile-font;
+    }
+  }
+}

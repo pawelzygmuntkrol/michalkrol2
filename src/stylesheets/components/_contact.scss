@@ -1,0 +1,36 @@
+.contact {
+  @include flex-align-center;
+
+  width: 100vw;
+  height: 100vh;
+
+  &__header {
+    font-size: $header-font;
+    font-weight: 900;
+    animation: 1000ms ease-out showHeader;
+  }
+
+  &__button {
+    position: absolute;
+    left: 50%;
+    margin-left: -4.5rem;
+    top: 75%;
+    width: 9rem;
+    height: 3rem;
+    font-size: $medium-font;
+    background-color: $dim-gray;
+    color: $gray;
+    border: none;
+
+    &--clicked {
+      width: 12rem;
+      margin-left: -6rem;
+    }
+  }
+
+  &__button:hover {
+    color: $white;
+    transition: 550ms ease-out;
+    cursor: pointer;
+  }
+}

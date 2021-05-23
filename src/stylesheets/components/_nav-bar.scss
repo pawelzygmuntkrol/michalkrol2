@@ -1,0 +1,83 @@
+.nav-bar {
+  @include flex-align-center($jst-cnt:space-between);
+
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 5rem;
+  padding: 1rem 2rem;
+  z-index: 3;
+
+  &__author-name {
+    font-size: $big-font;
+    font-weight: 900;
+  }
+
+  &__author-pseudonym {
+    font-size: $medium-font;
+    font-family: $suplementary-font;
+  }
+
+  // only in index.html
+  &__filter-button {
+    position: absolute;
+    left: 50%;
+    width: 4rem;
+    margin-left: -2rem;
+  }
+
+  &__filter-button:hover {
+    cursor: pointer;
+  }
+
+  &__menu-button,
+  &__back-button {
+    padding: 0.5rem 0;
+    font-size: $medium-font;
+    text-decoration: none;
+    z-index: 4;
+
+    &--unclicked {
+      color: $black;
+    }
+
+    &--hidden {
+      display: none;
+    }
+
+    &--clicked {
+      color: $gray;
+    }
+
+    &--clicked:hover {
+      color: $white;
+      transition: 0.6s ease-out;
+      cursor: pointer;
+    }
+  }
+
+  &__menu-button:hover {
+    cursor: pointer;
+  }
+
+  // only in artwork.html
+
+  &__back-button {
+    text-decoration: none;
+    color: $gray;
+  }
+
+  &__navigation-buttons-container {
+    display: grid;
+  }
+
+  @media (max-width: 480px), (max-width: 850px) and (orientation: landscape) {
+    &__author-name {
+      font-size: $medium-font;
+    }
+
+    &__author-pseudonym {
+      font-size: $small-font;
+    }
+  }
+}
